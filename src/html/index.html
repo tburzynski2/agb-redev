@@ -3,7 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+
     <title>American Garage Builders</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <img src="../../assets/images/agb-logo.png" alt="" />
+        </div>
+        <ul class="navbar__main-links">
+          <li><a href="#" class="navbar__link">Custom Garages</a></li>
+          <li><a href="#" class="navbar__link">Our Process</a></li>
+        </ul>
+        <ul class="navbar__additional-links">
+          <li><a href="#" class="navbar__link">Financing</a></li>
+          <li><a href="#" class="navbar__link">Gallery</a></li>
+          <li class="navbar__dropdown">
+            <a href="#" class="navbar__link dropdown-toggle"
+              >About <span class="chevron">&#x25BC;</span></a
+            >
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-link">Service Areas</a></li>
+              <li><a href="#" class="dropdown-link">Reviews</a></li>
+            </ul>
+          </li>
+          <li class="navbar__dropdown">
+            <a href="#" class="navbar__link dropdown-toggle"
+              >Locations <span class="chevron">&#x25BC;</span></a
+            >
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-link">Sun Prairie, WI</a></li>
+              <li><a href="#" class="dropdown-link">Johnson Creek, WI</a></li>
+              <li><a href="#" class="dropdown-link">Sheboygan, WI</a></li>
+              <li><a href="#" class="dropdown-link">Watertown, WI</a></li>
+              <li><a href="#" class="dropdown-link">Kenosha, WI</a></li>
+              <li><a href="#" class="dropdown-link">Beaver Dam, WI</a></li>
+              <li><a href="#" class="dropdown-link">Oshkosh, WI</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="btn__cta">Get a FREE Quote</a>
+        <button class="navbar__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+  </body>
+  <script src="../js/app.js"></script>
+  <script src="../js/utils.js"></script>
 </html>

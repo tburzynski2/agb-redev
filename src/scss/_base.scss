@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Lato Regular", sans-serif;
+}
+
+h1 {
+  font-family: "Arvo Bold", serif;
+}
+
+strong {
+  font-family: "Lato Black", sans-serif;
+}
+
+em {
+  font-family: "Lato Italic", sans-serif;
+}
