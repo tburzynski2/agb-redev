@@ -1,7 +1,9 @@
 @import "_variables";
 @import "fonts";
 @import "_base";
-@import "_components";
+@import "components/button";
+@import "components/card";
 @import "_layout";
 @import "_mixins";
+@import "_utilities";
 @import "pages/home";
