@@ -7,6 +7,23 @@ body:has(:not(:root):root) header {
   transform-origin: top center;
 }
 
+.grid-background {
+  background-color: $color-white;
+  background-image: linear-gradient(
+      rgba($color-primary-light, 0.25) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      90deg,
+      rgba($color-primary-light, 0.25) 2px,
+      transparent 2px
+    ),
+    linear-gradient(rgba($color-grid, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($color-grid, 0.15) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
 .navbar {
   display: flex;
   align-items: center;

@@ -91,4 +91,65 @@
       pointer-events: none; // Ensures the overlay doesn't block interactions
     }
   }
+
+  h2 .sub-text {
+    span {
+      color: $color-secondary;
+    }
+
+    em {
+      color: $color-primary-light;
+    }
+  }
+
+  ol {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+
+    strong {
+      display: block;
+      color: #a8b8d4;
+      display: block;
+      font-weight: 900;
+      font-size: 23px;
+      letter-spacing: 0.65px;
+      margin-top: 20px;
+      margin-bottom: 7px;
+    }
+
+    span {
+      display: block;
+    }
+
+    .icon {
+      width: 25%;
+      text-align: center;
+      color: #fff;
+      font-weight: normal;
+      font-size: 17px;
+      letter-spacing: 0.6px;
+      min-width: 30rem;
+      padding: 1rem 0;
+
+      img {
+        height: 10rem;
+        width: auto;
+      }
+    }
+  }
+}
+
+.financing-section {
+  background-color: $color-white;
+}
+
+.service-areas-section {
+  background-color: #eeeeeea2;
+}
+
+.cta-section {
+  background-color: $color-secondary;
 }
