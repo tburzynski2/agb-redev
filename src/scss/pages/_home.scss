@@ -143,7 +143,21 @@
 }
 
 .financing-section {
-  background-color: $color-white;
+  .text-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: $color-secondary;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    text-decoration: underline;
+    display: inline-block;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
 }
 
 .service-areas-section {

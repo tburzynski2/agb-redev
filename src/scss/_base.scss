@@ -46,6 +46,10 @@ h3 {
   line-height: 1.4;
 }
 
+p {
+  font-size: 1.7rem;
+}
+
 strong {
   font-family: "Lato Black", sans-serif;
 }
@@ -62,6 +66,46 @@ em {
 .text-block {
   max-width: 140rem;
   margin: 0 auto;
+}
+
+.split-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .split-item {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+ul.checkmark-list {
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: 0.7rem 2rem 0.7rem 5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    break-inside: avoid;
+
+    &::before {
+      content: url(../../assets/images/Check.png);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 1800px) {
