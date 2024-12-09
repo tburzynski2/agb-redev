@@ -1,6 +1,10 @@
 // Spacing
 
 // Fonts
+.font-secondary {
+  font-family: $font-family-secondary;
+}
+
 .upper {
   text-transform: uppercase;
 }
@@ -9,8 +13,16 @@
   margin-top: 2rem;
 }
 
+.padding-top-bottom-5 {
+  padding: 5rem 0;
+}
+
 .padding-top-bottom-10 {
   padding: 10rem 0;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5rem;
 }
 
 .text-center {

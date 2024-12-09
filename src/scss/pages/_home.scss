@@ -161,9 +161,16 @@
 }
 
 .service-areas-section {
-  background-color: #eeeeeea2;
+  background-color: $color-gray-bg;
+  height: 80vh;
+  box-sizing: border-box;
+
+  .service-areas-text {
+    // padding: 10rem;
+  }
 }
 
 .cta-section {
+  color: $color-white;
   background-color: $color-secondary;
 }
