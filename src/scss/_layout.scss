@@ -144,6 +144,25 @@ body:has(:not(:root):root) header {
   }
 }
 
+.navbar--open {
+  .navbar__main-links,
+  .navbar__additional-links {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
 .split-container {
   display: flex;
   flex: 1 1 auto;
@@ -204,6 +223,14 @@ body:has(:not(:root):root) header {
   }
 }
 
+footer {
+  background-color: $color-white;
+
+  .footer-upper {
+    border-bottom: 2px solid #e1e1e1;
+  }
+}
+
 // Animations
 @keyframes scroll {
   to {
@@ -229,24 +256,5 @@ body:has(:not(:root):root) header {
 
   .navbar__hamburger {
     display: flex;
-  }
-}
-
-.navbar--open {
-  .navbar__main-links,
-  .navbar__additional-links {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-white;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    li {
-      margin: 0.5rem 0;
-    }
   }
 }
