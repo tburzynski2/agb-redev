@@ -1,16 +1,32 @@
-header {
-  transition: all 0.3s ease;
+* {
+  transition: 0.1s ease-in-out;
 }
 
-body:has(:not(:root):root) header {
-  transform: scale(0.6);
+header {
   transform-origin: top center;
+  // transition: 0.3s ease-in-out;
+
+  &.shrink {
+    .navbar {
+      padding: 0 1rem;
+      margin: 0;
+
+      &__logo img {
+        max-height: 6rem;
+      }
+    }
+  }
 }
+
+// body:has(:not(:root):root) header {
+//   transform: scale(0.6);
+//   transform-origin: top center;
+// }
 
 .logo {
   filter: brightness(100%);
   opacity: 1;
-  transition: 0.25s ease-in-out;
+  // transition: 0.3s ease-in-out;
 
   &:hover {
     filter: brightness(110%);
@@ -41,7 +57,7 @@ body:has(:not(:root):root) header {
   align-items: center;
   justify-content: space-between;
   background-color: $color-white;
-  padding: 1rem 2rem;
+  padding: 1rem 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -89,7 +105,7 @@ body:has(:not(:root):root) header {
 
         .chevron {
           margin-left: 0.5rem;
-          transition: transform 0.3s;
+          // transition: transform 0.3s;
         }
       }
 
@@ -206,29 +222,47 @@ body:has(:not(:root):root) header {
 }
 
 .features-ticker {
+  font-family: $font-family-secondary;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-top: 100vh;
   background-color: $color-primary;
   color: $color-white;
-  padding: 4.5rem 0;
+
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
 
-  & ul {
+  ul {
     list-style: none;
     flex-shrink: 0;
     min-width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
+    padding: 2.75em 0;
 
     animation: scroll 20s linear infinite;
+
+    // &[aria-hidden="true"] {
+    //   color: red;
+    // }
+
+    li {
+      white-space: nowrap;
+      svg {
+        width: 2rem;
+      }
+    }
+
+    .trailing-star {
+      padding-right: 30rem;
+    }
   }
 
-  & img,
+  img,
   svg {
     height: 2rem;
   }
@@ -247,7 +281,6 @@ body:has(:not(:root):root) header {
 
     & > * {
       flex: 1;
-      // padding: 5rem;
     }
 
     .footer-logo {
@@ -281,7 +314,7 @@ body:has(:not(:root):root) header {
         li a {
           text-decoration: none;
           color: $color-primary;
-          transition: color 0.3s;
+          // transition: color 0.3s;
           text-transform: uppercase;
           font-weight: 900;
 
@@ -385,6 +418,21 @@ body:has(:not(:root):root) header {
   }
 }
 
+@media (min-width: 1500px) {
+  .features-ticker ul {
+    animation: none; // Stop animation
+    padding: 2.75em 5vw;
+  }
+
+  .features-ticker ul[aria-hidden="true"] {
+    display: none; // Hide duplicate ul
+  }
+
+  .trailing-star {
+    display: none;
+  }
+}
+
 @media (max-width: 1100px) {
   .navbar__main-links {
     display: none;
@@ -392,6 +440,16 @@ body:has(:not(:root):root) header {
 
   .navbar__hamburger {
     display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+
+    .navbar__logo img {
+      max-height: 12rem;
+    }
   }
 }
 
@@ -406,14 +464,23 @@ body:has(:not(:root):root) header {
     }
   }
 
-  .footer-locations {
+  .footer-lower .footer-locations {
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
+    border: 3px solid green;
+  }
+
+  .navbar__logo img {
+    max-height: 10rem; // Mobile-specific height
+  }
+
+  .navbar {
+    padding: 0.5rem 5%; // Adjust horizontal spacing
   }
 }
 
 @media (max-width: 480px) {
-  .footer-locations {
+  .footer-lower .footer-locations {
     grid-template-columns: 1fr;
   }
 }
