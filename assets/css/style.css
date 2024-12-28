@@ -1,69 +1,3 @@
-@font-face {
-  font-family: "Arvo";
-  src: url("../../assets/fonts/Arvo-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../../assets/fonts/Lato-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic; }
-
 *,
 *::after,
 *::before {
@@ -150,6 +84,96 @@ ul.checkmark-list {
 @media (max-width: 1800px) {
   text-block {
     max-width: 100rem; } }
+
+@font-face {
+  font-family: "Arvo";
+  src: url("../../assets/fonts/Arvo-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/Lato-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic; }
+
+.font-secondary {
+  font-family: "Arvo", serif; }
+
+.upper {
+  text-transform: uppercase; }
+
+.margin-top-2 {
+  margin-top: 2rem; }
+
+.padding-top-bottom-5 {
+  padding: 5rem 0; }
+
+.padding-top-bottom-10 {
+  padding: 10rem 0; }
+
+.padding-bottom-5 {
+  padding-bottom: 5rem; }
+
+.text-center {
+  text-align: center; }
+
+.color-primary {
+  color: #0c447b; }
 
 .btn {
   display: inline-block;
@@ -252,8 +276,55 @@ ul.checkmark-list {
   .card {
     max-width: 100%; } }
 
-* {
-  transition: 0.1s ease-in-out; }
+.features-ticker {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-top: 100vh;
+  background-color: #0c447b;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap; }
+  .features-ticker ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    padding: 2.75em 0;
+    animation: scroll 20s linear infinite; }
+    .features-ticker ul li {
+      white-space: nowrap; }
+      .features-ticker ul li svg {
+        width: 2rem; }
+    .features-ticker ul .trailing-star {
+      padding-right: 30rem; }
+  .features-ticker img,
+  .features-ticker svg {
+    height: 2rem; }
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - 2rem)); } }
+
+@media (min-width: 1500px) {
+  .features-ticker ul {
+    animation: none;
+    padding: 2.75em 5vw; }
+  .features-ticker ul[aria-hidden="true"] {
+    display: none; }
+  .trailing-star {
+    display: none; } }
+
+.grid-background {
+  background-color: #fff;
+  background-image: linear-gradient(rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(90deg, rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(rgba(150, 150, 150, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(150, 150, 150, 0.15) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; }
 
 header {
   transform-origin: top center; }
@@ -269,12 +340,6 @@ header {
   .logo:hover {
     filter: brightness(110%);
     opacity: 0.7; }
-
-.grid-background {
-  background-color: #fff;
-  background-image: linear-gradient(rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(90deg, rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(rgba(150, 150, 150, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(150, 150, 150, 0.15) 1px, transparent 1px);
-  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; }
 
 .navbar {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.16);
@@ -374,6 +439,39 @@ header {
   .navbar--open .navbar__additional-links li {
     margin: 0.5rem 0; }
 
+@media (max-width: 1500px) {
+  .navbar__additional-links {
+    display: none; }
+  .navbar__hamburger {
+    display: flex; } }
+
+@media (max-width: 1100px) {
+  .navbar__main-links {
+    display: none; }
+  .navbar__hamburger {
+    display: flex; } }
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.5rem 2rem; }
+    .navbar .navbar__logo img {
+      max-height: 12rem; } }
+
+@media (max-width: 768px) {
+  .footer-upper {
+    flex-direction: column;
+    align-items: center; }
+    .footer-upper .footer-links {
+      flex-direction: column;
+      text-align: center; }
+  .navbar__logo img {
+    max-height: 10rem; }
+  .navbar {
+    padding: 0.5rem 5%; } }
+
+* {
+  transition: 0.1s ease-in-out; }
+
 .split-container {
   display: flex;
   flex: 1 1 auto;
@@ -400,37 +498,6 @@ header {
   object-fit: cover;
   -o-object-position: center;
   object-position: center; }
-
-.features-ticker {
-  font-family: "Arvo", serif;
-  font-weight: 700;
-  font-size: 1.7rem;
-  margin-top: 100vh;
-  background-color: #0c447b;
-  color: #fff;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: nowrap; }
-  .features-ticker ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 3rem;
-    padding: 2.75em 0;
-    animation: scroll 20s linear infinite; }
-    .features-ticker ul li {
-      white-space: nowrap; }
-      .features-ticker ul li svg {
-        width: 2rem; }
-    .features-ticker ul .trailing-star {
-      padding-right: 30rem; }
-  .features-ticker img,
-  .features-ticker svg {
-    height: 2rem; }
 
 .footer {
   background-color: #fff;
@@ -519,37 +586,6 @@ header {
           font-size: 1.5rem;
           line-height: 1.5rem; }
 
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-100% - 2rem)); } }
-
-@media (max-width: 1500px) {
-  .navbar__additional-links {
-    display: none; }
-  .navbar__hamburger {
-    display: flex; } }
-
-@media (min-width: 1500px) {
-  .features-ticker ul {
-    animation: none;
-    padding: 2.75em 5vw; }
-  .features-ticker ul[aria-hidden="true"] {
-    display: none; }
-  .trailing-star {
-    display: none; } }
-
-@media (max-width: 1100px) {
-  .navbar__main-links {
-    display: none; }
-  .navbar__hamburger {
-    display: flex; } }
-
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 0.5rem 2rem; }
-    .navbar .navbar__logo img {
-      max-height: 12rem; } }
-
 @media (max-width: 768px) {
   .footer-upper {
     flex-direction: column;
@@ -557,42 +593,16 @@ header {
     .footer-upper .footer-links {
       flex-direction: column;
       text-align: center; }
+    .footer-upper .navbar__logo .img {
+      max-width: 30rem; }
   .footer-lower .footer-locations {
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
-    border: 3px solid green; }
-  .navbar__logo img {
-    max-height: 10rem; }
-  .navbar {
-    padding: 0.5rem 5%; } }
+    border: 3px solid green; } }
 
 @media (max-width: 480px) {
   .footer-lower .footer-locations {
     grid-template-columns: 1fr; } }
-
-.font-secondary {
-  font-family: "Arvo", serif; }
-
-.upper {
-  text-transform: uppercase; }
-
-.margin-top-2 {
-  margin-top: 2rem; }
-
-.padding-top-bottom-5 {
-  padding: 5rem 0; }
-
-.padding-top-bottom-10 {
-  padding: 10rem 0; }
-
-.padding-bottom-5 {
-  padding-bottom: 5rem; }
-
-.text-center {
-  text-align: center; }
-
-.color-primary {
-  color: #0c447b; }
 
 .hero-section-title {
   margin-bottom: 2.3rem; }

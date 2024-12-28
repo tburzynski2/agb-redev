@@ -1,9 +1,17 @@
-@import "_variables";
-@import "fonts";
-@import "_base";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/fonts";
+@import "base/utilities";
+
 @import "components/button";
 @import "components/card";
-@import "_layout";
-@import "_mixins";
-@import "_utilities";
+@import "components/features-ticker";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/layout";
+@import "layout/footer";
+
 @import "pages/home";

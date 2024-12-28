@@ -1,0 +1,34 @@
+* {
+  transition: 0.1s ease-in-out;
+}
+
+.split-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  height: 100%;
+
+  .split-item {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.split-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
