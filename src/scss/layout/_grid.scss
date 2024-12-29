@@ -1,16 +1,45 @@
-.grid-background {
-  background-color: $color-white;
-  background-image: linear-gradient(
-      rgba($color-primary-light, 0.25) 2px,
-      transparent 2px
-    ),
-    linear-gradient(
-      90deg,
-      rgba($color-primary-light, 0.25) 2px,
-      transparent 2px
-    ),
-    linear-gradient(rgba($color-grid, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($color-grid, 0.15) 1px, transparent 1px);
-  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+.row {
+  display: grid;
+  max-width: $grid-width;
+  margin: 0 auto;
+  gap: $gutter-vertical $gutter-horizontal;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: stretch;
+
+  @include respond(tab-port) {
+    gap: $gutter-vertical-small;
+    grid-template-columns: 1fr;
+  }
+
+  [class^="col-"] {
+    @include respond(tab-port) {
+      * {
+        grid-column: span 12;
+      }
+    }
+  }
+
+  .col-1-of-2 {
+    grid-column: span 6;
+  }
+
+  .col-1-of-3 {
+    grid-column: span 4;
+  }
+
+  .col-2-of-3 {
+    grid-column: span 8;
+  }
+
+  .col-1-of-4 {
+    grid-column: span 3;
+  }
+
+  .col-2-of-4 {
+    grid-column: span 6;
+  }
+
+  .col-3-of-4 {
+    grid-column: span 9;
+  }
 }

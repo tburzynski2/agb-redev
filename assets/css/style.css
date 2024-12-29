@@ -64,14 +64,6 @@ em {
   display: block;
   font-size: 2.5rem; }
 
-.text-block {
-  max-width: 140rem;
-  margin: 0 auto; }
-
-.split-text-block {
-  max-width: 61rem;
-  margin: 0 auto; }
-
 ul.checkmark-list {
   column-count: 2;
   column-gap: 2rem;
@@ -94,9 +86,11 @@ ul.checkmark-list {
       height: 32px;
       display: block; }
 
-@media (max-width: 1800px) {
-  text-block {
-    max-width: 100rem; } }
+.grid-background {
+  background-color: #fff;
+  background-image: linear-gradient(rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(90deg, rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(rgba(150, 150, 150, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(150, 150, 150, 0.15) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; }
 
 @font-face {
   font-family: "Arvo";
@@ -234,13 +228,6 @@ ul.checkmark-list {
     font-size: 1.4rem;
     max-width: fit-content; } }
 
-.card-container {
-  display: flex;
-  gap: 5rem;
-  flex-wrap: wrap;
-  padding: 1.6rem;
-  justify-content: center; }
-
 .card {
   display: flex;
   flex-direction: row;
@@ -249,10 +236,8 @@ ul.checkmark-list {
   color: #fff;
   border-radius: 5px;
   overflow: hidden;
-  max-width: calc(50% - 2.5rem);
-  min-width: 450px;
   transition: transform 0.2s;
-  align-items: stretch; }
+  height: 100%; }
 
 .card-image {
   flex: 1 0 10rem;
@@ -260,12 +245,10 @@ ul.checkmark-list {
   min-height: 200px;
   position: relative; }
   .card-image img {
-    display: block;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -284,10 +267,6 @@ ul.checkmark-list {
   .card-text p {
     margin: 2.5rem 0;
     font-size: 1.7rem; }
-
-@media (max-width: 1110px) {
-  .card {
-    max-width: 100%; } }
 
 .features-ticker {
   font-family: "Arvo", serif;
@@ -333,11 +312,32 @@ ul.checkmark-list {
   .trailing-star {
     display: none; } }
 
-.grid-background {
-  background-color: #fff;
-  background-image: linear-gradient(rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(90deg, rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(rgba(150, 150, 150, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(150, 150, 150, 0.15) 1px, transparent 1px);
-  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; }
+.row {
+  display: grid;
+  max-width: 140rem;
+  margin: 0 auto;
+  gap: 8rem 6rem;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: stretch; }
+  @media (max-width: 56.25em) {
+    .row {
+      gap: 6rem;
+      grid-template-columns: 1fr; } }
+  @media (max-width: 56.25em) {
+    .row [class^="col-"] * {
+      grid-column: span 12; } }
+  .row .col-1-of-2 {
+    grid-column: span 6; }
+  .row .col-1-of-3 {
+    grid-column: span 4; }
+  .row .col-2-of-3 {
+    grid-column: span 8; }
+  .row .col-1-of-4 {
+    grid-column: span 3; }
+  .row .col-2-of-4 {
+    grid-column: span 6; }
+  .row .col-3-of-4 {
+    grid-column: span 9; }
 
 header {
   transform-origin: top center; }
@@ -667,7 +667,7 @@ header {
   text-align: center; }
 
 .services-section {
-  padding: 5.5rem 5vw 10vw;
+  padding: 5.5rem 5vw 10rem;
   background-color: #fff; }
 
 .features-section {

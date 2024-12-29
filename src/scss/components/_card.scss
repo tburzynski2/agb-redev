@@ -1,11 +1,3 @@
-.card-container {
-  display: flex;
-  gap: 5rem;
-  flex-wrap: wrap;
-  padding: 1.6rem;
-  justify-content: center;
-}
-
 .card {
   display: flex;
   flex-direction: row;
@@ -14,10 +6,8 @@
   color: $color-white;
   border-radius: 5px;
   overflow: hidden;
-  max-width: calc(50% - 2.5rem);
-  min-width: 450px;
   transition: transform 0.2s;
-  align-items: stretch;
+  height: 100%;
 }
 
 .card-image {
@@ -26,12 +16,10 @@
   min-height: 200px;
   position: relative;
   img {
-    display: block;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -55,12 +43,5 @@
   p {
     margin: 2.5rem 0;
     font-size: 1.7rem;
-  }
-}
-
-// Media queries
-@media (max-width: 1110px) {
-  .card {
-    max-width: 100%;
   }
 }

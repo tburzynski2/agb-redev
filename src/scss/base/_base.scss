@@ -66,16 +66,6 @@ em {
   font-size: 2.5rem;
 }
 
-.text-block {
-  max-width: 140rem;
-  margin: 0 auto;
-}
-
-.split-text-block {
-  max-width: 61rem;
-  margin: 0 auto;
-}
-
 ul.checkmark-list {
   column-count: 2;
   column-gap: 2rem;
@@ -103,8 +93,19 @@ ul.checkmark-list {
   }
 }
 
-@media (max-width: 1800px) {
-  text-block {
-    max-width: 100rem;
-  }
+.grid-background {
+  background-color: $color-white;
+  background-image: linear-gradient(
+      rgba($color-primary-light, 0.25) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      90deg,
+      rgba($color-primary-light, 0.25) 2px,
+      transparent 2px
+    ),
+    linear-gradient(rgba($color-grid, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($color-grid, 0.15) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
