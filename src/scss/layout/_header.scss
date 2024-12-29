@@ -102,7 +102,7 @@ header {
         transform: rotate(180deg);
       }
 
-      .dropdown-menu {
+      .navbar__dropdown-menu {
         position: absolute;
         top: 100%;
         left: 0;
@@ -121,7 +121,7 @@ header {
             border-bottom: 1px solid $color-primary-dark;
           }
 
-          .dropdown-link {
+          .navbar__dropdown-link {
             min-height: 4.6rem;
             padding: 0.5rem 1rem;
             display: flex; /* Ensure it's a flex container */
@@ -138,7 +138,7 @@ header {
         }
       }
 
-      &:hover .dropdown-menu {
+      &:hover .navbar__dropdown-menu {
         display: flex;
       }
     }

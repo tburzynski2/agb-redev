@@ -206,35 +206,35 @@ ul.checkmark-list {
     .btn {
       font-size: 1.5rem;
       width: auto; } }
-  .btn__red-fill {
+  .btn--red-fill {
     background-color: #c71a33;
     color: #fff; }
-    .btn__red-fill:hover {
+    .btn--red-fill:hover {
       background-color: #9a1427; }
-  .btn__white-fill {
+  .btn--white-fill {
     background-color: #fff;
     color: #c71a33; }
-    .btn__white-fill:hover {
+    .btn--white-fill:hover {
       color: #021528;
       background-color: #a8b8d4; }
-  .btn__red-outline {
+  .btn--red-outline {
     background-color: #021528;
     border: 3px solid #c71a33;
     color: #fff; }
-    .btn__red-outline:hover {
+    .btn--red-outline:hover {
       background-color: #c71a33; }
-  .btn__blue-outline {
+  .btn--blue-outline {
     background-color: #a8b8d4;
     border: 3px solid #0c447b;
     color: #021528; }
-    .btn__blue-outline:hover {
+    .btn--blue-outline:hover {
       color: #fff;
       background-color: #0c447b; }
-  .btn__nav-quote.shrink {
+  .btn--nav-quote.shrink {
     max-height: 100%;
     border-radius: 0; }
   @media (max-width: 37.5em) {
-    .btn__nav-quote {
+    .btn--nav-quote {
       font-size: 1.2rem;
       max-width: 40%;
       height: 100%; } }
@@ -416,7 +416,7 @@ header {
         margin-left: 0.5rem; }
     .navbar__additional-links .navbar__dropdown:hover .chevron {
       transform: rotate(180deg); }
-    .navbar__additional-links .navbar__dropdown .dropdown-menu {
+    .navbar__additional-links .navbar__dropdown .navbar__dropdown-menu {
       position: absolute;
       top: 100%;
       left: 0;
@@ -427,11 +427,11 @@ header {
       z-index: 1000;
       list-style: none;
       min-width: 22rem; }
-      .navbar__additional-links .navbar__dropdown .dropdown-menu li {
+      .navbar__additional-links .navbar__dropdown .navbar__dropdown-menu li {
         margin: 0; }
-        .navbar__additional-links .navbar__dropdown .dropdown-menu li:not(:last-child) {
+        .navbar__additional-links .navbar__dropdown .navbar__dropdown-menu li:not(:last-child) {
           border-bottom: 1px solid #021528; }
-        .navbar__additional-links .navbar__dropdown .dropdown-menu li .dropdown-link {
+        .navbar__additional-links .navbar__dropdown .navbar__dropdown-menu li .navbar__dropdown-link {
           min-height: 4.6rem;
           padding: 0.5rem 1rem;
           display: flex;
@@ -443,9 +443,9 @@ header {
           text-align: center;
           color: #fff;
           white-space: nowrap; }
-          .navbar__additional-links .navbar__dropdown .dropdown-menu li .dropdown-link:hover {
+          .navbar__additional-links .navbar__dropdown .navbar__dropdown-menu li .navbar__dropdown-link:hover {
             background-color: #c71a33; }
-    .navbar__additional-links .navbar__dropdown:hover .dropdown-menu {
+    .navbar__additional-links .navbar__dropdown:hover .navbar__dropdown-menu {
       display: flex; }
   @media (max-width: 75em) {
     .navbar__additional-links {

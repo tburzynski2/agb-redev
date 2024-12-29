@@ -17,7 +17,7 @@
     width: auto;
   }
 
-  &__red-fill {
+  &--red-fill {
     background-color: $color-secondary;
     color: $color-white;
 
@@ -26,7 +26,7 @@
     }
   }
 
-  &__white-fill {
+  &--white-fill {
     background-color: $color-white;
     color: $color-secondary;
 
@@ -36,7 +36,7 @@
     }
   }
 
-  &__red-outline {
+  &--red-outline {
     background-color: $color-primary-dark;
     border: 3px solid $color-secondary;
     color: $color-white;
@@ -46,7 +46,7 @@
     }
   }
 
-  &__blue-outline {
+  &--blue-outline {
     background-color: $color-primary-light;
     border: 3px solid $color-primary;
     color: $color-primary-dark;
@@ -57,7 +57,7 @@
     }
   }
 
-  &__nav-quote {
+  &--nav-quote {
     &.shrink {
       max-height: 100%;
       border-radius: 0;
