@@ -6,22 +6,23 @@ header {
     .navbar {
       padding: 0 1rem;
       margin: 0;
+      max-height: 6rem;
 
-      &__logo img {
+      &__logo {
         max-height: 6rem;
+
+        img {
+          max-height: 6rem !important;
+
+          @include respond(tab-port) {
+            max-height: 12rem;
+          }
+          @include respond(phone) {
+            max-height: 10rem;
+          }
+        }
       }
     }
-  }
-}
-
-.logo {
-  filter: brightness(100%);
-  opacity: 1;
-  // transition: 0.3s ease-in-out;
-
-  &:hover {
-    filter: brightness(110%);
-    opacity: 0.7;
   }
 }
 
@@ -38,16 +39,16 @@ header {
   width: 100%;
   z-index: 1000;
   border-top: 6px solid $color-secondary;
+  // overflow: hidden;  // Hides button overflow, but hides dropdowns
 
-  &__logo img {
+  &__logo {
+    max-width: 33%;
     max-height: 26rem;
-    margin-left: 5vh;
-  }
+    margin-left: 5vw;
 
-  &__main-links {
-    text-transform: uppercase;
-    font-family: "Lato Black", sans-serif;
-    letter-spacing: 0.1rem;
+    img {
+      max-width: 100%;
+    }
   }
 
   &__main-links,
@@ -66,6 +67,20 @@ header {
           color: $color-secondary;
         }
       }
+    }
+  }
+
+  &__main-links {
+    text-transform: uppercase;
+    font-family: "Lato Black", sans-serif;
+    letter-spacing: 0.1rem;
+
+    @include respond(tab-land) {
+      font-size: 1.3rem;
+    }
+
+    @include respond(tab-port) {
+      display: none;
     }
   }
 
@@ -127,6 +142,10 @@ header {
         display: flex;
       }
     }
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__hamburger {
@@ -142,6 +161,17 @@ header {
       background-color: $color-primary;
       margin: 3px 0;
     }
+
+    @include respond(tab-land) {
+      display: flex;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 0.5rem 2rem;
+  }
+  @include respond(phone) {
+    padding: 0.5rem 5%;
   }
 }
 
@@ -161,55 +191,5 @@ header {
     li {
       margin: 0.5rem 0;
     }
-  }
-}
-
-@media (max-width: 1500px) {
-  .navbar__additional-links {
-    display: none;
-  }
-
-  .navbar__hamburger {
-    display: flex;
-  }
-}
-
-@media (max-width: 1100px) {
-  .navbar__main-links {
-    display: none;
-  }
-
-  .navbar__hamburger {
-    display: flex;
-  }
-}
-
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 0.5rem 2rem;
-
-    .navbar__logo img {
-      max-height: 12rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-upper {
-    flex-direction: column;
-    align-items: center;
-
-    .footer-links {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-
-  .navbar__logo img {
-    max-height: 10rem; // Mobile-specific height
-  }
-
-  .navbar {
-    padding: 0.5rem 5%; // Adjust horizontal spacing
   }
 }
