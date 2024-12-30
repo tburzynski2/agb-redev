@@ -79,19 +79,24 @@ ul.checkmark-list {
   list-style: none; }
   ul.checkmark-list li {
     position: relative;
-    padding: 0.7rem 2rem 0.7rem 5rem;
+    padding: 1.3rem 2rem 1.3rem 5rem;
     font-size: 2rem;
     font-weight: 900;
     break-inside: avoid; }
     ul.checkmark-list li::before {
-      content: url(../../assets/images/Check.png);
+      content: "";
+      background-image: url(../../assets/images/Check.png);
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 32px;
-      height: 32px;
+      background-size: 2.5rem 2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
       display: block; }
+  @media (max-width: 37.5em) {
+    ul.checkmark-list {
+      column-count: 1; } }
 
 .grid-background {
   background-color: #fff;
@@ -490,7 +495,6 @@ header {
 
 .split-container {
   display: flex;
-  flex: 1 1 auto;
   flex-wrap: wrap;
   height: 100%; }
   .split-container .split-item {
@@ -500,21 +504,9 @@ header {
     justify-content: center;
     padding: 2rem;
     position: relative;
-    height: 100%;
     box-sizing: border-box;
-    padding: 5.5rem 5vw; }
-
-.split-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center; }
+    padding: 5.5rem 5vw;
+    min-width: 300px; }
 
 .footer {
   background-color: #fff;
@@ -789,8 +781,14 @@ header {
 
 .service-areas-section {
   background-color: #eef1f6;
-  height: 80vh;
   box-sizing: border-box; }
+  .service-areas-section .split-image-container {
+    background-image: url("../../../assets/images/HomeGarage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 40rem; }
 
 .cta-section {
   color: #fff;

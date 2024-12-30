@@ -86,21 +86,27 @@ ul.checkmark-list {
 
   li {
     position: relative;
-    padding: 0.7rem 2rem 0.7rem 5rem;
+    padding: 1.3rem 2rem 1.3rem 5rem;
     font-size: 2rem;
     font-weight: 900;
     break-inside: avoid;
 
     &::before {
-      content: url(../../assets/images/Check.png);
+      content: "";
+      background-image: url(../../assets/images/Check.png);
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 32px;
-      height: 32px;
+      background-size: 2.5rem 2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
       display: block;
     }
+  }
+
+  @include respond(phone) {
+    column-count: 1;
   }
 }
 

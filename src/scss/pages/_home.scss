@@ -217,12 +217,16 @@
 
 .service-areas-section {
   background-color: $color-gray-bg;
-  height: 80vh;
   box-sizing: border-box;
 
-  // .service-areas-text {
-  //   padding: 10rem;
-  // }
+  .split-image-container {
+    background-image: url("../../../assets/images/HomeGarage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 40rem;
+  }
 }
 
 .cta-section {
