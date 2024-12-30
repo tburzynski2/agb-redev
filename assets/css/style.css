@@ -283,7 +283,6 @@ ul.checkmark-list {
   font-family: "Arvo", serif;
   font-weight: 700;
   font-size: 1.7rem;
-  margin-top: 100vh;
   background-color: #0c447b;
   color: #fff;
   overflow: hidden;
@@ -502,7 +501,8 @@ header {
     padding: 2rem;
     position: relative;
     height: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    padding: 5.5rem 5vw; }
 
 .split-image {
   position: absolute;
@@ -622,6 +622,12 @@ header {
         .footer-lower .footer-locations {
           grid-template-columns: 1fr; } }
 
+.hero-section {
+  padding-bottom: 100vh; }
+
+.hero-content {
+  height: 100%; }
+
 .hero-section-title {
   margin-bottom: 2.3rem; }
 
@@ -632,12 +638,24 @@ header {
   letter-spacing: 0.04vw;
   display: block;
   margin: 0 0 20px; }
+  @media (max-width: 56.25em) {
+    .hero-section .hero-content .hero-section-title {
+      font-size: 3vw; } }
+  @media (max-width: 37.5em) {
+    .hero-section .hero-content .hero-section-title {
+      font-size: 5vw; } }
   .hero-section .hero-content .hero-section-title strong {
     display: inline-block;
     background-color: #0c447b;
     padding: 0.3rem 1.3vw;
     font-family: "Arvo", serif;
     font-size: 3.2vw; }
+    @media (max-width: 56.25em) {
+      .hero-section .hero-content .hero-section-title strong {
+        font-size: 4vw; } }
+    @media (max-width: 37.5em) {
+      .hero-section .hero-content .hero-section-title strong {
+        font-size: 6vw; } }
   .hero-section .hero-content .hero-section-title span {
     display: block; }
     .hero-section .hero-content .hero-section-title span:last-child {
@@ -645,23 +663,30 @@ header {
       font-size: 1.2vw;
       font-weight: 600;
       margin-bottom: 2.3rem; }
+      @media (max-width: 56.25em) {
+        .hero-section .hero-content .hero-section-title span:last-child {
+          font-size: 1.5vw; } }
+      @media (max-width: 37.5em) {
+        .hero-section .hero-content .hero-section-title span:last-child {
+          font-size: 2.5vw; } }
 
-.hero-section .hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-  z-index: -1; }
+.hero-section {
+  margin-top: -6.6rem;
+  background-image: url("../../../assets/images/HeroImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center; }
+  @media (max-width: 75em) {
+    .hero-section {
+      background-image: url("../../../assets/images/HeroImage1400.jpg"); } }
+  @media (max-width: 37.5em) {
+    .hero-section {
+      background-image: url("../../../assets/images/HeroImage544.jpg"); } }
 
 .hero-section .hero-content {
   position: absolute;
-  top: calc(34% + 100px);
+  top: 85%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -670,12 +695,27 @@ header {
   width: 42%;
   padding-left: 3.5%;
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .hero-section .hero-content {
+      position: relative;
+      top: auto;
+      left: auto;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      margin: 0 auto;
+      padding-top: 10rem;
+      width: 66%; } }
+  @media (max-width: 37.5em) {
+    .hero-section .hero-content {
+      width: 80%; } }
 
 .services-section {
   padding: 5.5rem 5vw 10rem;
   background-color: #fff; }
 
 .features-section {
+  padding: 5.5rem 5vw 10rem;
   color: #fff; }
   .features-section .video-container {
     position: fixed;
@@ -732,18 +772,20 @@ header {
         height: 10rem;
         width: auto; }
 
-.financing-section .text-link {
-  display: inline-block;
-  margin-top: 3rem;
-  color: #c71a33;
-  font-weight: 900;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  letter-spacing: 0.8px;
-  text-decoration: underline;
-  display: inline-block; }
-  .financing-section .text-link:hover {
-    color: #0c447b; }
+.financing-section {
+  padding: 7rem 0; }
+  .financing-section .text-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: #c71a33;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    text-decoration: underline;
+    display: inline-block; }
+    .financing-section .text-link:hover {
+      color: #0c447b; }
 
 .service-areas-section {
   background-color: #eef1f6;
