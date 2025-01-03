@@ -290,33 +290,47 @@ ul.checkmark-list {
   font-size: 1.7rem;
   background-color: #0c447b;
   color: #fff;
-  overflow: hidden;
   display: flex;
-  flex-wrap: nowrap; }
+  overflow: hidden;  
+  flex-wrap: nowrap;
+  white-space: nowrap;
+ }
+
+ .features-ticker:hover ul {
+  animation-play-state: paused;
+ }
+
   .features-ticker ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    max-width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex: 0 0 auto;
+    min-width: 100vw;
+    
+    justify-content: space-between;
     align-items: center;
     gap: 3rem;
     padding: 2.75em 0;
     animation: scroll 20s linear infinite; }
     .features-ticker ul li {
+      list-style: none;
       white-space: nowrap; }
       .features-ticker ul li svg {
         width: 2rem; }
-    .features-ticker ul .trailing-star {
-      padding-right: 30rem; }
+    
+
+    .features-ticker:hover ul {
+      animation-play-state: paused;
+    }
   .features-ticker img,
   .features-ticker svg {
     height: 2rem; }
 
 @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
   to {
-    transform: translateX(calc(-100% - 2rem)); } }
+    transform: translateX(-100%); } }
 
 @media (min-width: 1500px) {
   .features-ticker ul {
