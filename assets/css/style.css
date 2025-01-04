@@ -304,6 +304,7 @@ ul.checkmark-list {
     display: flex;
     flex: 0 0 auto;
     min-width: 100vw;
+    margin-right: 3rem;
     
     justify-content: space-between;
     align-items: center;
@@ -312,7 +313,9 @@ ul.checkmark-list {
     animation: scroll 20s linear infinite; }
     .features-ticker ul li {
       list-style: none;
-      white-space: nowrap; }
+      white-space: nowrap;
+      text-align: center;
+     }
       .features-ticker ul li svg {
         width: 2rem; }
     
@@ -330,7 +333,7 @@ ul.checkmark-list {
   }
 
   to {
-    transform: translateX(-100%); } }
+    transform: translateX(calc(-100% - 3rem)); } }
 
 @media (min-width: 1500px) {
   .features-ticker ul {
