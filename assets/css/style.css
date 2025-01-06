@@ -33,6 +33,9 @@ h1 {
   margin: 0 0 20px;
   font-weight: 900;
   letter-spacing: 1px; }
+  h1 .sub-text {
+    display: block;
+    font-size: 3rem; }
 
 h2 {
   font-size: 4rem;
@@ -40,6 +43,7 @@ h2 {
   font-weight: 900;
   letter-spacing: 1px; }
   h2 .sub-text {
+    display: block;
     font-size: 2.5rem; }
 
 h3 {
@@ -49,6 +53,7 @@ h3 {
   letter-spacing: 1px;
   line-height: 1.4; }
   h3 .sub-text {
+    display: block;
     font-size: 2rem; }
 
 p {
@@ -103,6 +108,12 @@ ul.checkmark-list {
   background-image: linear-gradient(rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(90deg, rgba(168, 184, 212, 0.25) 2px, transparent 2px), linear-gradient(rgba(150, 150, 150, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(150, 150, 150, 0.15) 1px, transparent 1px);
   background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; }
+
+.cta-link {
+  font-family: "Arvo", serif;
+  color: #fff; }
+  .cta-link:hover {
+    color: #c71a33; }
 
 @font-face {
   font-family: "Arvo";
@@ -194,6 +205,12 @@ ul.checkmark-list {
 .color-primary {
   color: #0c447b; }
 
+.color-primary-light {
+  color: #a8b8d4; }
+
+.color-primary-dark {
+  color: #021528; }
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -235,6 +252,12 @@ ul.checkmark-list {
     .btn--blue-outline:hover {
       color: #fff;
       background-color: #0c447b; }
+  .btn--no-outline {
+    color: #fff; }
+    .btn--no-outline span {
+      text-decoration: underline; }
+    .btn--no-outline:hover {
+      color: #c71a33; }
   .btn--nav-quote.shrink {
     max-height: 100%;
     border-radius: 0; }
@@ -327,6 +350,49 @@ ul.checkmark-list {
     display: none; }
   .trailing-star {
     display: none; } }
+
+.location-card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .location-card-wrapper a {
+    text-decoration: none;
+    color: #000; }
+    .location-card-wrapper a:hover {
+      color: #0c447b; }
+
+.location-card {
+  display: inline-block;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center; }
+  .location-card strong {
+    display: block; }
+  .location-card .service-text {
+    display: block; }
+  .location-card .star-rating {
+    display: block;
+    color: #0c447b;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700; }
+    .location-card .star-rating::after {
+      content: "";
+      display: inline-block;
+      width: 1.7rem;
+      height: 1.7rem;
+      margin-left: 5px;
+      background-color: #0c447b;
+      -webkit-mask: url("../../../assets/icons/star-icon.svg") no-repeat;
+      mask: url("../../../assets/icons/star-icon.svg") no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      vertical-align: middle; }
+  .location-card.selected {
+    background-color: #bcc9e2; }
+  .location-card:hover {
+    background-color: #a8b8d4; }
 
 .row {
   display: grid;
@@ -503,7 +569,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
     position: relative;
     box-sizing: border-box;
     padding: 5.5rem 5vw;
@@ -817,3 +882,27 @@ header {
 .cta-section {
   color: #fff;
   background-color: #c71a33; }
+
+.custom-garages-hero {
+  margin-top: -2rem;
+  color: #fff;
+  background-color: #021528; }
+  .custom-garages-hero .split-image-container {
+    background-image: url("../../../assets/images/CustomGarageHero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 40rem; }
+  .custom-garages-hero img {
+    fill: #fff;
+    stroke: #a8b8d4;
+    height: 1.7rem;
+    width: auto; }
+
+.custom-service-areas {
+  background-color: #eef1f6;
+  padding: 10rem 5vw 10rem 5vw; }
+
+.custom-options {
+  padding: 10rem 5vw 10rem 5vw; }

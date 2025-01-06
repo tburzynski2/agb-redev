@@ -1,0 +1,30 @@
+.custom-garages-hero {
+  margin-top: -2rem;
+  color: $color-white;
+  background-color: $color-primary-dark;
+
+  .split-image-container {
+    background-image: url("../../../assets/images/CustomGarageHero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 40rem;
+  }
+
+  img {
+    fill: $color-white;
+    stroke: $color-primary-light;
+    height: 1.7rem;
+    width: auto;
+  }
+}
+
+.custom-service-areas {
+  background-color: $color-gray-bg;
+  padding: 10rem 5vw 10rem 5vw;
+}
+
+.custom-options {
+  padding: 10rem 5vw 10rem 5vw;
+}

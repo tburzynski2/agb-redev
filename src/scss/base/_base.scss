@@ -24,6 +24,11 @@ h1 {
   margin: 0 0 20px;
   font-weight: 900;
   letter-spacing: 1px;
+
+  .sub-text {
+    display: block;
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -33,6 +38,7 @@ h2 {
   letter-spacing: 1px;
 
   .sub-text {
+    display: block;
     font-size: 2.5rem;
   }
 }
@@ -45,6 +51,7 @@ h3 {
   line-height: 1.4;
 
   .sub-text {
+    display: block;
     font-size: 2rem;
   }
 }
@@ -125,4 +132,13 @@ ul.checkmark-list {
     linear-gradient(90deg, rgba($color-grid, 0.15) 1px, transparent 1px);
   background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.cta-link {
+  font-family: $font-family-secondary;
+  color: $color-white;
+
+  &:hover {
+    color: $color-secondary;
+  }
 }

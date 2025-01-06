@@ -57,6 +57,18 @@
     }
   }
 
+  &--no-outline {
+    color: $color-white;
+
+    span {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
   &--nav-quote {
     &.shrink {
       max-height: 100%;

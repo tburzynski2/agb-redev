@@ -1,0 +1,60 @@
+.location-card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.location-card {
+  display: inline-block;
+  padding: 2rem;
+  background-color: $color-white;
+  border-radius: 5px;
+  text-align: center;
+
+  strong {
+    display: block;
+  }
+
+  .service-text {
+    display: block;
+  }
+
+  .star-rating {
+    display: block;
+    color: $color-primary;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1.7rem;
+      height: 1.7rem;
+      margin-left: 5px;
+      background-color: $color-primary;
+      -webkit-mask: url("../../../assets/icons/star-icon.svg") no-repeat;
+      mask: url("../../../assets/icons/star-icon.svg") no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      vertical-align: middle;
+    }
+  }
+
+  &.selected {
+    background-color: $color-blue-bg;
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
