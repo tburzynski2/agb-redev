@@ -196,6 +196,9 @@ ul.checkmark-list {
 .padding-top-bottom-10 {
   padding: 10rem 0; }
 
+.padding-bottom-2 {
+  padding-bottom: 2rem; }
+
 .padding-bottom-5 {
   padding-bottom: 5rem; }
 
@@ -393,6 +396,71 @@ ul.checkmark-list {
     background-color: #bcc9e2; }
   .location-card:hover {
     background-color: #a8b8d4; }
+
+.hover-card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly; }
+
+.hover-card {
+  position: relative;
+  width: calc((100% - (2 * 2rem)) / 3);
+  height: 40rem;
+  min-width: 35rem;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+  .hover-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; }
+    .hover-card__image--custom-1 {
+      background-image: url("../../assets/images/1CarGarageWisconsin.jpg"); }
+    .hover-card__image--custom-2 {
+      background-image: url("../../assets/images/DetatchedGarageWisconsin.jpg"); }
+    .hover-card__image--custom-3 {
+      background-image: url("../../assets/images/CustomGarageWisconsin.jpg"); }
+  .hover-card__text {
+    position: absolute;
+    top: 87%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #021528;
+    color: #fff;
+    padding: 1rem 4rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .hover-card__text .hover-card__title {
+      font-size: 2rem;
+      color: #a8b8d4;
+      align-self: baseline; }
+    .hover-card__text .hover-card__description {
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: top 2s ease, opacity 0.3s ease, transform 0.3s ease; }
+  .hover-card:hover .hover-card__image {
+    transform: scale(1.05); }
+  .hover-card:hover .hover-card__text {
+    top: 0;
+    height: 100%;
+    background-color: rgba(2, 21, 40, 0.8); }
+    .hover-card:hover .hover-card__text .hover-card__description {
+      opacity: 1;
+      transform: translateY(0); }
 
 .row {
   display: grid;

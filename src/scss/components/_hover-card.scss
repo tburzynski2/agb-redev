@@ -1,0 +1,91 @@
+$hover-card-gap: 2rem;
+
+.hover-card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $hover-card-gap;
+  justify-content: space-evenly;
+}
+
+.hover-card {
+  position: relative;
+  width: calc((100% - (2 * #{$hover-card-gap})) / 3);
+  height: 40rem;
+  min-width: 35rem;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+
+    &--custom-1 {
+      background-image: url("../../assets/images/1CarGarageWisconsin.jpg");
+    }
+
+    &--custom-2 {
+      background-image: url("../../assets/images/DetatchedGarageWisconsin.jpg");
+    }
+
+    &--custom-3 {
+      background-image: url("../../assets/images/CustomGarageWisconsin.jpg");
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 87%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    padding: 1rem 4rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hover-card__title {
+      font-size: 2rem;
+      color: $color-primary-light;
+      align-self: baseline;
+    }
+
+    .hover-card__description {
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: top 2s ease, opacity 0.3s ease, transform 0.3s ease;
+    }
+  }
+
+  &:hover {
+    .hover-card__image {
+      transform: scale(1.05);
+    }
+
+    .hover-card__text {
+      top: 0;
+      height: 100%;
+      background-color: rgba($color-primary-dark, 0.8);
+
+      .hover-card__description {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
