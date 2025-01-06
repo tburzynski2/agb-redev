@@ -22,9 +22,17 @@
 
 .custom-service-areas {
   background-color: $color-gray-bg;
-  padding: 10rem 5vw 10rem 5vw;
+  padding: 5rem 5vw;
 }
 
 .custom-options {
-  padding: 10rem 5vw 10rem 5vw;
+  padding: 5rem 5vw;
+}
+
+.custom-carousel {
+  padding: 5rem 5vw;
+
+  .carousel-container {
+    width: 100%;
+  }
 }

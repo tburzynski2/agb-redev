@@ -357,7 +357,9 @@ ul.checkmark-list {
 .location-card-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between; }
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem; }
   .location-card-wrapper a {
     text-decoration: none;
     color: #000; }
@@ -461,6 +463,81 @@ ul.checkmark-list {
     .hover-card:hover .hover-card__text .hover-card__description {
       opacity: 1;
       transform: translateY(0); }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .carousel__viewport {
+    overflow: hidden;
+    flex: 1; }
+  .carousel__track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform; }
+  .carousel__card {
+    flex: 0 0 25%;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer; }
+    .carousel__card img {
+      width: 100%;
+      display: block; }
+    @media (max-width: 56.25em) {
+      .carousel__card {
+        flex: 0 0 50%; } }
+    @media (max-width: 37.5em) {
+      .carousel__card {
+        flex: 0 0 100%; } }
+  .carousel__chevron {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; }
+    .carousel__chevron--left {
+      left: -40px; }
+      @media (max-width: 37.5em) {
+        .carousel__chevron--left {
+          left: -20px; } }
+    .carousel__chevron--right {
+      right: -40px; }
+      @media (max-width: 37.5em) {
+        .carousel__chevron--right {
+          right: -20px; } }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 2; }
+  .lightbox.is-active {
+    display: flex; }
+  .lightbox__content {
+    position: relative; }
+    .lightbox__content img {
+      max-width: 100%;
+      max-height: 70vh;
+      display: block; }
+    .lightbox__content .lightbox__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer; }
 
 .row {
   display: grid;
@@ -970,7 +1047,12 @@ header {
 
 .custom-service-areas {
   background-color: #eef1f6;
-  padding: 10rem 5vw 10rem 5vw; }
+  padding: 5rem 5vw; }
 
 .custom-options {
-  padding: 10rem 5vw 10rem 5vw; }
+  padding: 5rem 5vw; }
+
+.custom-carousel {
+  padding: 5rem 5vw; }
+  .custom-carousel .carousel-container {
+    width: 100%; }
