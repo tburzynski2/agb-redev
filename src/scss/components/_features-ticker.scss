@@ -2,36 +2,33 @@
   font-family: $font-family-secondary;
   font-weight: 700;
   font-size: 1.7rem;
-  // margin-top: 100vh;
   background-color: $color-primary;
   color: $color-white;
 
-  overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
 
   ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    max-width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex: 0 0 auto;
+    min-width: 100vw;
+    justify-content: space-between;
     align-items: center;
-    gap: 3rem;
-    padding: 2.75em 0;
 
     animation: scroll 20s linear infinite;
 
     li {
+      list-style: none;
+      padding: 5rem 2vw;
+      flex: 1;
+      text-align: center;
+
       white-space: nowrap;
       svg {
         width: 2rem;
       }
-    }
-
-    .trailing-star {
-      padding-right: 30rem;
     }
   }
 
@@ -43,8 +40,11 @@
 
 // Animations
 @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
   to {
-    transform: translateX(calc(-100% - 2rem));
+    transform: translateX(-100%);
   }
 }
 
@@ -53,7 +53,7 @@
 @media (min-width: 1500px) {
   .features-ticker ul {
     animation: none; // Stop animation
-    padding: 2.75em 5vw;
+    justify-content: space-around;
   }
 
   .features-ticker ul[aria-hidden="true"] {

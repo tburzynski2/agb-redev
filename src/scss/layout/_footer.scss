@@ -117,17 +117,6 @@
         font-size: 1.4rem;
         color: #000;
 
-        &:hover {
-          strong {
-            color: $color-primary;
-          }
-          .location-icon {
-            fill: $color-secondary;
-            stroke: $color-secondary;
-            transform: scale(1.5);
-          }
-        }
-
         .location-item {
           display: flex;
           align-items: flex-start;
@@ -153,6 +142,17 @@
           span {
             margin-top: 0.5rem;
             display: block;
+          }
+
+          &:hover {
+            strong {
+              color: $color-primary;
+            }
+            .location-icon {
+              fill: $color-secondary;
+              stroke: $color-secondary;
+              transform: scale(1.5);
+            }
           }
         }
 
