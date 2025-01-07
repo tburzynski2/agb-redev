@@ -399,12 +399,17 @@ ul.checkmark-list {
   .location-card:hover {
     background-color: #a8b8d4; }
 
+.custom-options {
+  padding: 5rem 5vw; }
+
 .hover-card-wrapper {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-evenly; }
+  gap: 2rem; }
+  @media (max-width: 56.25em) {
+    .hover-card-wrapper {
+      flex-direction: column;
+      gap: 0; } }
 
 .hover-card {
   position: relative;
@@ -413,7 +418,12 @@ ul.checkmark-list {
   min-width: 35rem;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 4px 6px rgba(2, 21, 40, 0.9); }
+  @media (max-width: 56.25em) {
+    .hover-card {
+      width: 100%;
+      height: auto;
+      border: 1px solid #969696; } }
   .hover-card__image {
     position: absolute;
     top: 0;
@@ -422,47 +432,72 @@ ul.checkmark-list {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: transform 0.3s ease; }
+    transition: transform 0.3s ease;
+    z-index: -1; }
     .hover-card__image--custom-1 {
       background-image: url("../../assets/images/1CarGarageWisconsin.jpg"); }
     .hover-card__image--custom-2 {
       background-image: url("../../assets/images/DetatchedGarageWisconsin.jpg"); }
     .hover-card__image--custom-3 {
       background-image: url("../../assets/images/CustomGarageWisconsin.jpg"); }
+    @media (max-width: 56.25em) {
+      .hover-card__image {
+        display: none; } }
   .hover-card__text {
     position: absolute;
-    top: 87%;
+    top: 80%;
     left: 0;
     width: 100%;
-    height: auto;
-    background-color: #021528;
+    padding: 3rem;
+    background-color: rgba(2, 21, 40, 0.9);
     color: #fff;
-    padding: 1rem 4rem;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .hover-card__text .hover-card__title {
-      font-size: 2rem;
-      color: #a8b8d4;
-      align-self: baseline; }
-    .hover-card__text .hover-card__description {
+    z-index: 2;
+    transition: all 0.3s ease; }
+    @media (max-width: 56.25em) {
+      .hover-card__text {
+        position: relative;
+        top: auto;
+        padding: 2rem; } }
+    .hover-card__text p {
       font-size: 1.5rem;
-      letter-spacing: 0.1rem;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: top 2s ease, opacity 0.3s ease, transform 0.3s ease; }
-  .hover-card:hover .hover-card__image {
-    transform: scale(1.05); }
-  .hover-card:hover .hover-card__text {
-    top: 0;
-    height: 100%;
-    background-color: rgba(2, 21, 40, 0.8); }
-    .hover-card:hover .hover-card__text .hover-card__description {
-      opacity: 1;
-      transform: translateY(0); }
+      display: none; }
+  .hover-card__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem; }
+    .hover-card__title .toggle-icon {
+      font-size: 1.7rem;
+      color: #fff; }
+    @media (max-width: 56.25em) {
+      .hover-card__title {
+        margin-bottom: 0; } }
+  .hover-card__description {
+    font-size: 1rem; }
+    @media (max-width: 56.25em) {
+      .hover-card__description {
+        display: none; } }
+    .hover-card__description--expanded {
+      display: block !important;
+      margin-top: 2rem; }
+  @media (min-width: 900px) {
+    .hover-card:hover .hover-card__image {
+      transform: scale(1.05); }
+    .hover-card:hover .hover-card__text {
+      top: 0;
+      height: 100%;
+      background-color: #021528; }
+      .hover-card:hover .hover-card__text .hover-card__description {
+        opacity: 1;
+        transform: translateY(0); }
+      .hover-card:hover .hover-card__text .hover-card__description {
+        display: block; } }
+
+.toggle-icon {
+  display: none; }
+  @media (max-width: 56.25em) {
+    .toggle-icon {
+      display: inline-block; } }
 
 .carousel {
   display: flex;
@@ -484,6 +519,8 @@ ul.checkmark-list {
     .carousel__card img {
       width: 100%;
       display: block; }
+      .carousel__card img:hover {
+        filter: brightness(80%); }
     @media (max-width: 56.25em) {
       .carousel__card {
         flex: 0 0 50%; } }

@@ -104,3 +104,73 @@ lightbox.addEventListener("click", (e) => {
     lightboxImage.alt = "";
   }
 });
+
+// ===================================================
+// ----- ACCORDION FUNCTIONALITY -----
+// ===================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".hover-card");
+
+  const isMobile = () => window.innerWidth <= 900;
+
+  const setupAccordion = () => {
+    if (isMobile()) {
+      cards.forEach((card) => {
+        const title = card.querySelector(".hover-card__title");
+        const description = card.querySelector(".hover-card__description");
+        const icon = card.querySelector(".toggle-icon");
+
+        // Collapse all sections initially
+        description.classList.remove("hover-card__description--expanded");
+        icon.textContent = "+";
+
+        title.addEventListener("click", () => {
+          cards.forEach((otherCard) => {
+            const otherDescription = otherCard.querySelector(
+              ".hover-card__description"
+            );
+            const otherIcon = otherCard.querySelector(".toggle-icon");
+            otherDescription.classList.remove(
+              "hover-card__description--expanded"
+            );
+            otherIcon.textContent = "+";
+          });
+
+          const isExpanded = description.classList.toggle(
+            "hover-card__description--expanded"
+          );
+          icon.textContent = isExpanded ? "-" : "+";
+        });
+      });
+
+      // After clearing all, expand the first card
+      if (cards.length > 0) {
+        const firstCard = cards[0];
+        const firstText = firstCard.querySelector(".hover-card__description");
+        const firstIcon = firstCard.querySelector(".toggle-icon");
+        firstText.classList.add("hover-card__description--expanded");
+        firstIcon.textContent = "-";
+      }
+    }
+  };
+
+  setupAccordion();
+
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (!isMobile()) {
+        // Remove accordion behavior on larger screens
+        cards.forEach((card) => {
+          const text = card.querySelector(".hover-card__description");
+          const icon = card.querySelector(".toggle-icon");
+          text.classList.add("hover-card__description--expanded");
+          icon.textContent = "";
+        });
+      } else {
+        setupAccordion();
+      }
+    }, 150);
+  });
+});

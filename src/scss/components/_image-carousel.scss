@@ -24,6 +24,10 @@
     img {
       width: 100%;
       display: block;
+
+      &:hover {
+        filter: brightness(80%);
+      }
     }
 
     @include respond(tab-port) {
