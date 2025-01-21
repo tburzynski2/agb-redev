@@ -57,6 +57,15 @@
     }
   }
 
+  &--white-outline {
+    border: 3px solid $color-white;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
   &--no-outline {
     color: $color-white;
 

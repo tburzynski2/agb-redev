@@ -255,6 +255,11 @@ ul.checkmark-list {
     .btn--blue-outline:hover {
       color: #fff;
       background-color: #0c447b; }
+  .btn--white-outline {
+    border: 3px solid #fff;
+    color: #fff; }
+    .btn--white-outline:hover {
+      background-color: #021528; }
   .btn--no-outline {
     color: #fff; }
     .btn--no-outline span {
@@ -432,8 +437,7 @@ ul.checkmark-list {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: transform 0.3s ease;
-    z-index: -1; }
+    transition: transform 0.3s ease; }
     .hover-card__image--custom-1 {
       background-image: url("../../assets/images/1CarGarageWisconsin.jpg"); }
     .hover-card__image--custom-2 {
@@ -575,6 +579,91 @@ ul.checkmark-list {
       color: white;
       font-size: 1.5rem;
       cursor: pointer; }
+
+.tabs {
+  list-style: none;
+  display: flex;
+  position: relative; }
+  .tabs::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #eee;
+    width: 100%; }
+  .tabs .tab {
+    margin: 0;
+    border-bottom: 1px solid #a8b8d4;
+    padding: 1rem;
+    color: #0c447b;
+    border: none;
+    text-align: left;
+    font-size: 1.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .tabs .tab:hover {
+      color: #a8b8d4; }
+      .tabs .tab:hover .tab__icon {
+        fill: #a8b8d4; }
+    .tabs .tab--active {
+      border-bottom: 3px solid #0c447b;
+      z-index: 1; }
+    .tabs .tab__icon {
+      margin: 0 0.5rem;
+      height: 3.4rem;
+      width: 3.4rem;
+      fill: #0c447b; }
+    .tabs .tab__indicator {
+      margin-left: 1rem; }
+
+.tab__content {
+  padding: 5rem 0;
+  display: none; }
+  .tab__content--split {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; }
+    @media (max-width: 56.25em) {
+      .tab__content--split {
+        flex-direction: column-reverse; } }
+  .tab__content--text {
+    flex: 1; }
+    .tab__content--text h3 {
+      display: flex;
+      align-items: center; }
+    .tab__content--text p {
+      padding-bottom: 2rem; }
+  .tab__content--image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 30rem; }
+    .tab__content--image img {
+      position: absolute;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: auto;
+      display: block; }
+
+.tab__content--active {
+  display: block; }
+
+.tab[aria-selected="true"] + .tab__content {
+  display: block; }
+
+@media (max-width: 900px) {
+  .tabs {
+    flex-direction: column; }
+    .tabs .tab__button {
+      background: #0c447b; }
+    .tabs .tab__content--split {
+      flex-direction: column-reverse; }
+      .tabs .tab__content--split--image {
+        margin-bottom: 1rem; } }
 
 .row {
   display: grid;
@@ -1087,9 +1176,63 @@ header {
   padding: 5rem 5vw; }
 
 .custom-options {
+  background-color: #fff;
   padding: 5rem 5vw; }
 
 .custom-carousel {
+  background-color: #fff;
   padding: 5rem 5vw; }
   .custom-carousel .carousel-container {
     width: 100%; }
+
+.custom-sizes-section {
+  padding: 5rem 5vw; }
+  .custom-sizes-section .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5; }
+    .custom-sizes-section .video-container .video {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+    .custom-sizes-section .video-container .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #021528;
+      opacity: 0.75;
+      pointer-events: none; }
+  .custom-sizes-section .custom-sizes-container {
+    min-height: 20rem;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem; }
+    @media (max-width: 75em) {
+      .custom-sizes-section .custom-sizes-container {
+        flex-direction: column;
+        align-items: baseline; } }
+  .custom-sizes-section .custom-size-heading {
+    flex: 1; }
+    .custom-sizes-section .custom-size-heading h2 {
+      font-size: 2rem; }
+      @media (max-width: 75em) {
+        .custom-sizes-section .custom-size-heading h2 {
+          margin-bottom: 0; } }
+  .custom-sizes-section .custom-size-text {
+    flex: 2; }
+  .custom-sizes-section .custom-size-cta {
+    flex: 1; }
+    .custom-sizes-section .custom-size-cta a {
+      font-size: 1.4rem; }
+
+.custom-tabbed-section {
+  background-color: #fff;
+  padding: 5rem 5vw; }

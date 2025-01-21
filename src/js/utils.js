@@ -106,7 +106,7 @@ lightbox.addEventListener("click", (e) => {
 });
 
 // ===================================================
-// ----- ACCORDION FUNCTIONALITY -----
+// ------------- ACCORDION FUNCTIONALITY -------------
 // ===================================================
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".hover-card");
@@ -172,5 +172,31 @@ document.addEventListener("DOMContentLoaded", () => {
         setupAccordion();
       }
     }, 150);
+  });
+});
+
+// ========================================================
+// ------------- TABBED SECTION FUNCTIONALITY -------------
+// ========================================================
+
+const tabs = document.querySelectorAll("[data-tab-target]");
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const tabContentTarget = document.getElementById(tab.dataset.tabTarget);
+    const activeTabContents = document.querySelectorAll(
+      ".tab__content--active"
+    );
+    activeTabContents.forEach((activeTabContent) => {
+      activeTabContent.classList.remove("tab__content--active");
+    });
+
+    tabs.forEach((activeTab) => {
+      activeTab.classList.remove("tab--active");
+      activeTab.querySelector(".tab__indicator").textContent = "+";
+    });
+
+    tabContentTarget.classList.add("tab__content--active");
+    tab.classList.add("tab--active");
+    tab.querySelector(".tab__indicator").textContent = "-";
   });
 });

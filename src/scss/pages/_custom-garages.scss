@@ -26,13 +26,89 @@
 }
 
 .custom-options {
+  background-color: #fff;
   padding: 5rem 5vw;
 }
 
 .custom-carousel {
+  background-color: #fff;
   padding: 5rem 5vw;
 
   .carousel-container {
     width: 100%;
   }
+}
+
+.custom-sizes-section {
+  padding: 5rem 5vw;
+
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+
+    .video {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-primary-dark;
+      opacity: 0.75;
+      pointer-events: none; // Ensures the overlay doesn't block interactions
+    }
+  }
+
+  .custom-sizes-container {
+    min-height: 20rem;
+    color: $color-white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: baseline;
+    }
+  }
+
+  .custom-size-heading {
+    flex: 1;
+
+    h2 {
+      font-size: 2rem;
+
+      @include respond(tab-land) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .custom-size-text {
+    flex: 2;
+  }
+
+  .custom-size-cta {
+    flex: 1;
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.custom-tabbed-section {
+  background-color: #fff;
+  padding: 5rem 5vw;
 }
