@@ -25,6 +25,8 @@ const rightChevron = document.querySelector(".carousel__chevron--right");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.querySelector(".lightbox__image");
 const closeLightboxButton = document.querySelector(".lightbox__close");
+// Flexbox card gap
+const cardGap = 16;
 
 let currentIndex = 0;
 
@@ -37,7 +39,7 @@ firstCards.forEach((card) => {
   carouselTrack.appendChild(clone);
 });
 
-lastCards.forEach((card) => {
+lastCards.slice().reverse().forEach((card) => {
   const clone = card.cloneNode(true);
   carouselTrack.insertBefore(clone, carouselTrack.firstChild);
 });
@@ -46,7 +48,8 @@ lastCards.forEach((card) => {
 function updateCarousel() {
   const cardWidth = carouselCards[0].getBoundingClientRect().width;
   const visibleIndex = currentIndex + 4;
-  carouselTrack.style.transform = `translateX(-${visibleIndex * cardWidth}px)`;
+  const hc = 443.75;
+  carouselTrack.style.transform = `translateX(-${visibleIndex * (cardWidth + cardGap)}px)`;
 }
 
 // Initial position for infinite loop
