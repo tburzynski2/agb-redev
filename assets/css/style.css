@@ -222,16 +222,16 @@ ul.checkmark-list {
 .btn {
   display: inline-block;
   text-decoration: none;
-  width: 30rem;
   max-width: 100%;
-  padding: 1.7rem 1.5rem;
+  padding: 1.9rem 1.5rem;
   border-radius: 5px;
   font-family: "Arvo", serif;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   letter-spacing: 1.8px;
   transition: background-color 0.3s;
-  text-align: center; }
+  text-align: center;
+  min-width: 30rem; }
   @media (max-width: 75em) {
     .btn {
       font-size: 1.5rem;
@@ -271,14 +271,17 @@ ul.checkmark-list {
       text-decoration: underline; }
     .btn--no-outline:hover {
       color: #c71a33; }
-  .btn--nav-quote.shrink {
-    max-height: 100%;
-    border-radius: 0; }
-  @media (max-width: 37.5em) {
-    .btn--nav-quote {
-      font-size: 1.2rem;
-      max-width: 40%;
-      height: 100%; } }
+  .btn--nav-quote {
+    min-width: 0; }
+    .btn--nav-quote.shrink {
+      max-height: 100%;
+      margin-top: -6px;
+      border-radius: 0; }
+    @media (max-width: 37.5em) {
+      .btn--nav-quote {
+        font-size: 1.2rem;
+        max-width: 40%;
+        height: 100%; } }
 
 .card {
   display: flex;
