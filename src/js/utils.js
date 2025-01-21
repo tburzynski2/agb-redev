@@ -48,7 +48,6 @@ lastCards.slice().reverse().forEach((card) => {
 function updateCarousel() {
   const cardWidth = carouselCards[0].getBoundingClientRect().width;
   const visibleIndex = currentIndex + 4;
-  const hc = 443.75;
   carouselTrack.style.transform = `translateX(-${visibleIndex * (cardWidth + cardGap)}px)`;
 }
 
