@@ -205,6 +205,11 @@ ul.checkmark-list {
 .text-center {
   text-align: center; }
 
+.text-center-narrow {
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto; }
+
 .color-primary {
   color: #0c447b; }
 
@@ -1064,10 +1069,29 @@ header {
 
 .services-section {
   padding: 5.5rem 5vw 10rem;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
+  .services-section > * {
+    position: inherit;
+    z-index: 1; }
+  .services-section .text-block {
+    max-width: 100rem;
+    margin: 0 auto; }
+  .services-section .nails {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0; }
+  .services-section .hammer {
+    position: absolute;
+    bottom: -53rem;
+    left: 0;
+    z-index: 0;
+    width: 40rem;
+    height: auto; }
 
 .features-section {
-  padding: 5.5rem 5vw 10rem;
+  padding: 11rem 5vw;
   color: #fff; }
   .features-section .video-container {
     position: fixed;

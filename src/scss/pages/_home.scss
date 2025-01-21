@@ -112,10 +112,37 @@
 .services-section {
   padding: 5.5rem 5vw 10rem;
   background-color: $color-white;
+  position: relative;
+
+  & > * {
+    position: inherit;
+    z-index: 1;
+  }
+
+  .text-block {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  .nails {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  .hammer {
+    position: absolute;
+    bottom: -53rem;
+    left: 0;
+    z-index: 0;
+    width: 40rem;
+    height: auto;
+  }
 }
 
 .features-section {
-  padding: 5.5rem 5vw 10rem;
+  padding: 11rem 5vw;
   color: $color-white;
 
   .video-container {
