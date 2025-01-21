@@ -732,8 +732,7 @@ header {
   border-top: 6px solid #c71a33; }
   .navbar__logo {
     max-width: 33%;
-    max-height: 26rem;
-    margin-left: 5vw; }
+    max-height: 26rem; }
     .navbar__logo img {
       max-width: 100%; }
   .navbar__main-links, .navbar__additional-links {
@@ -749,7 +748,7 @@ header {
           color: #c71a33; }
   .navbar__main-links {
     text-transform: uppercase;
-    font-family: "Lato Black", sans-serif;
+    font-family: "Lato Bold", sans-serif;
     letter-spacing: 0.1rem; }
     @media (max-width: 75em) {
       .navbar__main-links {
@@ -820,6 +819,11 @@ header {
   @media (max-width: 37.5em) {
     .navbar {
       padding: 0.5rem 5%; } }
+
+.location-pin {
+  height: 1.6rem;
+  width: auto;
+  margin-right: 0.3rem; }
 
 .navbar--open .navbar__main-links,
 .navbar--open .navbar__additional-links {

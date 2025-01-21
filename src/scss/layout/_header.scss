@@ -1,6 +1,5 @@
 header {
   transform-origin: top center;
-  // transition: 0.3s ease-in-out;
 
   &.shrink {
     .navbar {
@@ -44,7 +43,6 @@ header {
   &__logo {
     max-width: 33%;
     max-height: 26rem;
-    margin-left: 5vw;
 
     img {
       max-width: 100%;
@@ -72,7 +70,7 @@ header {
 
   &__main-links {
     text-transform: uppercase;
-    font-family: "Lato Black", sans-serif;
+    font-family: $font-family-primary-bold;
     letter-spacing: 0.1rem;
 
     @include respond(tab-land) {
@@ -173,6 +171,12 @@ header {
   @include respond(phone) {
     padding: 0.5rem 5%;
   }
+}
+
+.location-pin {
+  height: 1.6rem;
+  width: auto;
+  margin-right: 0.3rem;
 }
 
 .navbar--open {
