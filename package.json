@@ -7,7 +7,7 @@
     "watch:sass": "node-sass src/scss/main.scss assets/css/style.css -w",
     "devserver": "live-server --browser=chrome --open=src/html/index.html",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass src/sass/main.scss assets/css/style.comp.css",
+    "compile:sass": "node-sass src/scss/main.scss assets/css/style.css",
     "concat:css": "concat -o assets/css/style.concat.css assets/css/icon-font.css assets/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/style.concat.css -o assets/css/style.prefix.css",
     "compress:css": "sass assets/css/style.prefix.css assets/css/style.css --style=compressed",
