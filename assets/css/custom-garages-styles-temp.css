@@ -244,6 +244,11 @@ body {
 
 .faq-item__body {
     display: none;
+    margin-top: 1rem;
+}
+
+.faq-item__body--active {
+    display: block;
 }
 
 .service-areas {

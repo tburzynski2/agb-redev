@@ -202,3 +202,18 @@ tabs.forEach((tab) => {
     tab.querySelector(".tab__indicator").textContent = "-";
   });
 });
+
+// ========================================================
+// ------------- FAQ ACCORDION FUNCTIONALITY --------------
+// ========================================================
+
+document.querySelector('.faq-section__wrapper').addEventListener('click', function(e) {
+  if (e.target.closest('.faq-item__heading')) {
+    var faqItem = e.target.closest('.faq-item');
+    var faqBody = faqItem.querySelector('.faq-item__body');
+
+    e.preventDefault();
+
+    faqBody.classList.toggle('faq-item__body--active');
+  }
+});
