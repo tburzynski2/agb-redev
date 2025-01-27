@@ -209,11 +209,22 @@ tabs.forEach((tab) => {
 
 document.querySelector('.faq-section__wrapper').addEventListener('click', function(e) {
   if (e.target.closest('.faq-item__heading')) {
-    var faqItem = e.target.closest('.faq-item');
-    var faqBody = faqItem.querySelector('.faq-item__body');
+    let faqItem = e.target.closest('.faq-item');
+    let faqBody = faqItem.querySelector('.faq-item__body');
 
     e.preventDefault();
 
     faqBody.classList.toggle('faq-item__body--active');
   }
 });
+
+// ========================================================
+// --------- SERVICE AREA DROPDOWN FUNCTIONALITY ----------
+// ========================================================
+
+document.querySelector('.service-areas__btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  var serviceList = document.querySelector('.service-areas__list');
+  serviceList.classList.toggle('service-areas__list--active');
+});
+

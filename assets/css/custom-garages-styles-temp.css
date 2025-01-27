@@ -264,5 +264,30 @@ body {
 }
 
 .service-areas__list {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.service-areas__list--active {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 3rem;
+}
+
+.service-areas__item {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.service-areas__item:hover {
+    color: var(--color-secondary);
+}
+
+.service-areas__item:active {
+    color: var(--color-primary-dark);
 }
